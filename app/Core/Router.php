@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Core;
+namespace App\Core; #bagitau class ni ada dalam folder App\Core
 
-use App\Controllers\PageController;
+use App\Controllers\PageController; #import class PageController
 
 class Router {
 
-    public function run($url) {
+    public function run($url) { 
 
-        $controller = new PageController();
+        $controller = new PageController(); #new = arahan untuk buat object
 
-        switch ($url) {
+        switch ($url) { #If Url 
             case 'about':
                 $controller->about();
                 break;

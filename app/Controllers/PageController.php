@@ -6,10 +6,10 @@ use App\Models\PageModel;
 
 class PageController {
 
-    public function home() {
+    public function home() { 
 
         $model = new PageModel();
-        $data = $model->getHomeData();
+        $data = $model->getHomeData(); #Panggil Function dekat Models/PageModel.php
 
         require "app/Views/home.php";
     }
@@ -17,8 +17,9 @@ class PageController {
     public function about() {
 
         $model = new PageModel();
-        $data = $model->getAboutData();
+        $data = $model->getAboutData(); #Panggil Function dekat Models/PageModel.php
 
-        require "app/Views/about.php";
+        require "app/Views/about.php"; #Include dan jalankan pada file (about.php) sekarang juga. 
+                                       #Require = perlu
     }
 }
