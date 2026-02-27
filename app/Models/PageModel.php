@@ -1,14 +1,13 @@
 <?php
-
 namespace App\Models;
 
 class PageModel {
 
     public function getHomeData() {
-        return "Selamat datang ke MVC versi namespace!";
+        return "Selamat Datang ke Website MVC Modern!";
     }
 
     public function getAboutData() {
-        return "Ini adalah halaman About Us (Namespace Version).";
+        return "Ini adalah halaman About Us.";
     }
 }

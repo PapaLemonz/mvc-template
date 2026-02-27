@@ -1,4 +1,2 @@
-<h1>About Page</h1>
-<p><?php echo $data; ?></p>
-
-<a href="home">Home</a>
+<h2>About Page</h2>
+<p><?= $data ?></p>

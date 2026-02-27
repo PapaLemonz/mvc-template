@@ -1,25 +1,23 @@
 <?php
-
 namespace App\Controllers;
 
 use App\Models\PageModel;
 
 class PageController {
 
-    public function home() { 
-
+    public function home() {
         $model = new PageModel();
-        $data = $model->getHomeData(); #Panggil Function dekat Models/PageModel.php
+        $data = $model->getHomeData();
 
-        require "app/Views/home.php";
+        $content = __DIR__ . "/../Views/home.php";  // content page
+        require __DIR__ . "/../Views/layout.php";   // load template
     }
 
     public function about() {
-
         $model = new PageModel();
-        $data = $model->getAboutData(); #Panggil Function dekat Models/PageModel.php
+        $data = $model->getAboutData();
 
-        require "app/Views/about.php"; #Include dan jalankan pada file (about.php) sekarang juga. 
-                                       #Require = perlu
+        $content = __DIR__ . "/../Views/about.php";
+        require __DIR__ . "/../Views/layout.php";
     }
 }

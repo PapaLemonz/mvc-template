@@ -1,27 +1,17 @@
 <?php
-
-namespace App\Core; #bagitau class ni ada dalam folder App\Core
-
-use App\Controllers\PageController; #import class PageController
+namespace App\Core;
 
 class Router {
 
-    public function run($url) { 
-
-        $controller = new PageController(); #new = arahan untuk buat object
-
-        switch ($url) { #If Url 
+    public function run($url) {
+        switch ($url) {
             case 'about':
+                $controller = new \App\Controllers\PageController();
                 $controller->about();
                 break;
-
-            case '':
-            case 'home':
-                $controller->home();
-                break;
-
             default:
-                echo "404 Page Not Found";
+                $controller = new \App\Controllers\PageController();
+                $controller->home();
                 break;
         }
     }
